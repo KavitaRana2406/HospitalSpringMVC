@@ -1,0 +1,69 @@
+1. Get All
+get http://localhost:6788/patients
+[
+    {
+        "patientId": 101,
+        "patientName": "Martin",
+        "age": 34,
+        "disease": "Cholera"
+    },
+    {
+        "patientId": 102,
+        "patientName": "Kathy",
+        "age": 24,
+        "disease": "Typhoid"
+    },
+    {
+        "patientId": 103,
+        "patientName": "Alexis",
+        "age": 32,
+        "disease": "Migrane"
+    },
+    {
+        "patientId": 104,
+        "patientName": "Max",
+        "age": 22,
+        "disease": "Influenza"
+    }
+]
+
+2.Get By Id
+get http://localhost:6788/patient/103
+{
+    "patientId": 103,
+    "patientName": "Alexis",
+    "age": 32,
+    "disease": "Migrane"
+}
+
+3. Create Patient
+
+post http://localhost:6788/patient
+Body 
+{
+    "patientId": 103,
+    "patientName": "Alexis",
+    "age": 32,
+    "disease": "Migrane"
+}
+
+o/p: 1 record inserted
+
+4.Update Patient
+put http://localhost:6788/patient/103
+Body 
+Updated the disease
+
+{
+    "patientId": 103,
+    "patientName": "Alexis",
+    "age": 32,
+    "disease": "Heart Ailment"
+}
+
+o/p: 1 record updated
+
+5.Delete
+delete http://localhost:6788/patient/103
+
+1 record deleted
